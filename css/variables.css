@@ -1,0 +1,62 @@
+:root {
+  /* Light theme (default) */
+  --bg-color: #f5f5f5;
+  --calculator-bg: #ffffff;
+  --display-bg: #f9f9f9;
+  --btn-bg: #ffffff;
+  --btn-color: #333333;
+  --btn-shadow: rgba(0, 0, 0, 0.1);
+  --btn-operation-bg: #f0f0f0;
+  --btn-operation-color: #5b5b5b;
+  --btn-equal-bg: #4285f4;
+  --btn-equal-color: #ffffff;
+  --btn-clear-bg: #ff5252;
+  --btn-clear-color: #ffffff;
+  --text-color: #333333;
+  --display-text-color: #212121;
+  --history-text-color: #757575;
+  --border-color: #e0e0e0;
+  
+  /* Sizing and spacing */
+  --border-radius: 12px;
+  --button-radius: 8px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --header-height: 60px;
+  --display-height: 80px;
+  --history-height: 40px;
+  --button-size: 60px;
+  
+  /* Typography */
+  --font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  --font-size-sm: 14px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  
+  /* Transitions */
+  --transition-speed: 0.3s;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --calculator-bg: #1e1e1e;
+  --display-bg: #2d2d2d;
+  --btn-bg: #2d2d2d;
+  --btn-color: #ffffff;
+  --btn-shadow: rgba(0, 0, 0, 0.3);
+  --btn-operation-bg: #3d3d3d;
+  --btn-operation-color: #ffffff;
+  --btn-equal-bg: #4285f4;
+  --btn-equal-color: #ffffff;
+  --btn-clear-bg: #ff5252;
+  --btn-clear-color: #ffffff;
+  --text-color: #ffffff;
+  --display-text-color: #ffffff;
+  --history-text-color: #b0b0b0;
+  --border-color: #3d3d3d;
+}

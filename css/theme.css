@@ -1,0 +1,67 @@
+/* Theme toggle button styles */
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Light/Dark mode icon visibility */
+.light-icon, .dark-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity var(--transition-speed) ease,
+              transform var(--transition-speed) ease;
+}
+
+/* Default state (light mode) */
+.light-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.dark-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0);
+}
+
+/* Dark mode state */
+[data-theme="dark"] .light-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0);
+}
+
+[data-theme="dark"] .dark-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .calculator {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Transitions for theme switching */
+.calculator,
+.calculator-header,
+.calculator-display,
+.btn,
+.display,
+#history-display,
+.calculator-header h1 {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
