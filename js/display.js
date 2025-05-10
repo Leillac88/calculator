@@ -22,24 +22,24 @@ class display {
     }
 
     appendDigit(digit) {
-        if (this.currentValue === "0" && digit !== ".") {
+        if (this.currentValue === "0" && digit !== "."){
             this.updateDisplay(digit)
         }
 
         else if (digit === "." && this.currentValue.includes(".")) {
             return
         }
- 
+
         else {
-            this.updateDisplay(this.currentValue + digit)       
+            this.updateDisplay(this.currentValue + digit)
         }
     }
 
     removeLastDigit() {
-        if (this.currentValue.lenght === 1) {
+        if (this.currentValue.length === 1) {
             this.updateDisplay("0")
         } else {
             this.updateDisplay(this.currentValue.slice(0, -1))
         }
     }
-}
+}  
