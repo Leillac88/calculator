@@ -26,8 +26,8 @@ body {
   border-radius: var(--border-radius);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: background-color var(--transition-speed) ease, 
-              box-shadow var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 .calculator-header {
@@ -150,12 +150,11 @@ body {
   font-size: 20px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
   .container {
     padding: var(--spacing-sm);
   }
-  
+
   :root {
     --button-size: 50px;
     --display-height: 70px;
