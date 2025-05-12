@@ -36,16 +36,47 @@ class Calculator {
                         this.clear()
                         break;
                     
-                    case "clear":
-                        this.clear()
+                    case "calculate":
+                        this.calculate()
                         break;
                     
-                    case "clear":
-                        this.clear()
+                    case "backspace":
+                        this.backspace()
+                        break;
+
+                    case "percent":
+                        this.percent()
                         break;
                         
+                    case "sqrt":
+                        this.squareRoot()
+                        break;
                 }
             })
         })
+
+        document.addEventListener("keydown", (event) => {
+            this.handleKeyboardInput(event)
+        })
+    }
+
+    appendNumber(number) {
+        if (this.shouldResetDisplay) {
+            this.display.updateDisplay("")
+            this.shouldResetDisplay = false
+        }
+
+        this.display.appendDigit(number)
+        this.currentOperand = this.display.currentValue
+    }
+
+    chooseOperation(operation) {
+        if (this.currentOperand === "erro") {
+            return
+
+            if (this.operation !== null && !this.shouldResetDisplay) {
+                this.calculate()
+            }
+        }
     }
 }
