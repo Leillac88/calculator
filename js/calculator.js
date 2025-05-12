@@ -71,12 +71,17 @@ class Calculator {
     }
 
     chooseOperation(operation) {
-        if (this.currentOperand === "erro") {
+        if (this.currentOperand === "erro")
             return
 
-            if (this.operation !== null && !this.shouldResetDisplay) {
-                this.calculate()
-            }
+        if (this.operation !== null && !this.shouldResetDisplay) {
+            this.calculate()
         }
+        
+        this.previusOperand = this.currentOperand
+        this.operation = operation
+        this.shouldResetDisplay = true
+
+        this.display.updateHistory(`${this.previusOperand} ${getOperatorSymbol(this.operation)}`)
     }
 }
